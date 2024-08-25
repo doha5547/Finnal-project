@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background: #ececec;
+    background-color: #ececec;
+    background-image: url(./Src/1.jpg);
+     background-size: cover;
+     background-position: center;
+   background-repeat: no-repeat;
+}
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.201);
+    backdrop-filter: blur(20px);
+    z-index: -1;
+}
+.dropdown-menu {
+    max-height: 200px;
+    width: 195px;
+    border-radius: 10px;
+    overflow-y: auto;
+
+
+}
+.dropdown-toggle{
+    position: relative;
+    left: 225px !important;
+    top: -50px;
+}
+.dropdown-menu::-webkit-scrollbar {
+    display: none;
+}
+.dropdown-menu {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+.dropdown-menu input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.dropdown-menu label {
+    display: block;
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+.dropdown-menu label:hover {
+    background-color: #03284c;
+    color: #ffffff;
+}
+
+
+/*------------ SignIN & SignUP container ------------*/
+
+/*------------ Right box ------------*/
+
+.right-box{
+    padding: 40px 30px 40px 40px;
+    background-color: #ffffff98;
+    border-radius: 20px;
+    width: 500px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.5);
+    
+h2{
+    size: 20px;
+    color: rgb(255, 255, 255);
+}
+p{
+    size: 10px;
+    color: rgb(228, 228, 228);
+}
+}
+/*------------ left box ------------*/
+.left-box{
+    position: relative;
+    left: 25px;
+        padding: 40px 30px 40px 40px;
+        background-color: #0a3859fe;
+        border-radius: 10px !important ;
+        width: 200px;
+        height: 440px;
+        box-shadow: -10px 0px 50px rgba(0, 0, 0, 0.5);
+img{
+     position: relative;
+     width: 250px;
+     top: -80px;
+     left: -10px;
+ }
+ p {
+    position: relative;
+    top: -80px;
+    left: -10px;
+     font-size: 20px !important;
+     color: rgb(178, 178, 178) !important ; 
+     
+ }
+ small{
+    position: relative;
+    color: rgb(178, 178, 178) !important;
+    text-align: left !important;
+    font-size: 12px !important;
+    width: 150px !important;
+    left: -10px;
+
+ }
+}
+.input-group.mb-3 button{
+    background-color: #0a3859fe;
+    border: solid 0.5px #567290;
+}
+.input-group.mb-3 button:active{
+    background-color: #082b43fe;
+    border: solid 0.5px #567290;
+}
+
+/*------------ Custom Placeholder ------------*/
+::placeholder{
+    font-size: 16px;
+}
+.rounded-4{
+    border-radius: 20px;
+}
+.rounded-5{
+    border-radius: 30px;
+}
+@media only screen and (min-width: 600px) and (max-width: 785px) {
+.dropdown {
+        position: relative;
+        left: -93%;
+    }
+
+}
+@media only screen and (max-width: 600px) {
+body{
+    overflow: hidden;
+}
+
+    .left-box {
+        border-radius: 10px !important;
+            width: 300px;
+            height: 150px;
+            position: relative;
+            top: -250px;
+            left: 140px;
+    img {
+        position: relative;
+        top: 25px;
+        left: -65px;
+        width: 80px;
+
+    }
+
+    p {
+        position: relative;
+        top: -30px;
+        left: 30px;
+        font-size: 18px !important;
+        color: rgb(178, 178, 178) !important;
+
+    }
+
+    small {
+        position: relative;
+        color: #0a3859fe !important;
+        text-align: left !important;
+        font-size: 12px !important;
+        width: 200px !important;
+        left: -10px;
+        top: -40px;
+        
+
+    }
+    }
+
+        .right-box {
+            padding: 40px 30px 40px 40px;
+            background-color: #ffffff98;
+            border-radius: 20px;
+            position: relative;
+            left: -140px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(10px);
+            box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.5);
+    
+            h2 {
+                size: 20px;
+                color: rgb(255, 255, 255);
+            }
+    
+            p {
+                size: 10px;
+                color: rgb(228, 228, 228);
+            }
+        }
+        .row.align-items-center{
+            width: 250px;
+        }
+    .dropdown{
+        position: relative;
+        left: -108%;
+    }
+}
+

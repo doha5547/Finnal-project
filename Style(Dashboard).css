@@ -1,0 +1,238 @@
+body {
+    background-color: #ffffff;
+    user-select: none;
+    }
+
+    
+
+
+
+.card {
+    background-color: #23455d00;
+    color: white;
+    border: none;
+    text-align: center !important;
+    height: 50px;
+    border-radius: 50px;
+    
+
+    p {
+        font-size: 20px;
+        position: relative;
+        top: 0px;
+        text-align: center !important;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color: #65bffffe;
+        left: 12px;
+        font-weight: 500;
+    }
+
+    h5 {
+        text-align: center !important;
+        top: 5px;
+        position: relative;
+    }
+}
+
+.table-container {
+    display: flex;
+    top: 30px;
+    justify-content: center !important;
+    padding: 20px;
+    background-color: rgba(0, 255, 255, 0);
+    position: relative;
+    text-align: center !important;
+    overflow-y: auto;
+    max-height: 695px;
+    scrollbar-width: none;
+}
+
+.table-container::-webkit-scrollbar {
+    display: none;
+}
+.container{
+    display: flex;
+    justify-content: center !important;
+}
+.container .row{
+    width: 90%;
+    border-radius: 50px;
+}
+ 
+.table{
+    background-color: #a2b6d1fe;
+    position: relative;
+    top: -20px;
+    
+}
+.table thead th {
+
+    top: -20px;
+    position: sticky;
+    background-color: #23455dfe;
+    color: white;
+        border: #afc5e0fe;
+    text-align: center !important;
+
+}
+
+.table tr {
+    background-color: #a2b6d1fe;
+    color: #0a3859fe;
+    border: #afc5e0fe;
+    font-weight: 500;
+    font-size: 18px;
+
+}
+
+.table tbody tr:hover {
+    background-color: #afc5e0fe;
+    border: #afc5e0fe;
+    transform: scale(1.01);
+    box-shadow: 0 4px 8px rgba(10, 56, 89, 0.447);
+    cursor: pointer;
+}
+.navbar{
+    background-color: rgba(10, 56, 89, 0.996);
+        box-shadow: 0 4px 8px rgba(10, 56, 89, 0.447);
+}
+
+.navbar button {
+    position: relative;
+
+    top: -10px;
+    color: #fffffffe;
+    font-weight: 600;
+    border: solid 0.5px #fffffffe;
+
+    button:hover {
+        background-color: #fffffffe;
+
+    }
+}
+
+.navbar button:hover {
+    background-color: #fffffffe;
+    color: #0a3859fe;
+    border: solid 0.5px #0a3859fe;
+}
+
+.navbar button:active {
+    background-color: #0a3859fe !important;
+    color: #ffffff !important;
+    border: solid 0.5px #0a3859fe !important;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.74) !important;
+}
+
+.navbar button:focus {
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.5);
+}      
+.modal-footer button.btn.btn-primary {
+    background-color: #0a3859fe !important;
+    border: solid 0.5px #0a3859fe;
+
+}
+.modal-footer button:hover.btn.btn-primary {
+    background-color: #082f4bfe !important;
+
+}
+.modal-footer button:active.btn.btn-primary{
+box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.5);
+}
+#dropdownMenuButton ,
+#dropdownMenuButton2 ,
+#dropdownMenuButton1 ,
+#dropdownMenuButton3,
+#dropdownMenuButton4{
+    background-color: #ffffff;
+    color: #082f4bfe;
+    position: relative;
+    top: -9px;
+    width: 300px;
+
+}
+.dropdown-menu {
+    max-height: 200px;
+    width: 300px;
+    border-radius: 10px;
+    overflow-y: auto;
+    text-align: center;
+
+
+}
+
+ #dropdownMenuList2 , #dropdownMenuList4{
+    width: 65px;
+    max-width: 65px;
+    font-size: large;
+    text-align: center;
+}
+
+.dropdown-menu::-webkit-scrollbar {
+    display: none;
+}
+
+.dropdown-menu {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.dropdown-menu input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.dropdown-menu label {
+    display: block;
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+.dropdown-menu label:hover {
+    background-color: #03274c7c;
+    color: #ffffff;
+}
+#GPA #dropdownMenuButton{
+    position: relative;
+    left: 300px;
+    top: -18px;
+}
+ #dropdownMenuButton2 , #dropdownMenuButton4{
+    width: 160px ;
+
+
+}
+.table-container tbody{
+    text-align: center;
+}
+.fas.fa-eraser{
+    position: relative !important;
+    left: -50px !important;
+
+}
+#dropdownMenuButton3{
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+    cursor: not-allowed;
+}
+@media only screen and (max-width: 600px){
+    #dropdownMenuButton3 ,#dropdownMenuButton{
+        width: 200px;
+        font-size: 14px;
+    }
+        #dropdownMenuButton4 , #dropdownMenuButton2{
+            font-size: 14px;
+            width: 100px;
+        }
+                .dropdown-menu{
+                    width: 200px;
+                    font-size: 12px;
+                }
+            #dropdownMenuList2,
+             #dropdownMenuList4 {
+
+               max-width: 10px;
+               font-size: 14px;
+        }
+
+}

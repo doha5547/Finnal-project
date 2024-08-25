@@ -1,0 +1,208 @@
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="Shortcut icon" href="./Style/Src/LOGO1.ico">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="./Style/Style(Dashboard).css">
+
+</head>
+
+<body>
+    <nav class="navbar bg-body-tertiary">
+        <a class="navbar-brand" href="./Dashboard.html" style="color: #ffffff; font-weight: 500;">
+            <img src="./Style/Src/White  Modern Education Logo.png" style="width: 30%;" ></img> StudyTrack
+        </a>
+        <div class="container">
+            <div class="row my-4">
+                <div class="col-md-3">
+                    <div class="card text-center">
+                        <div class="card-body d-flex align-items-center">
+                            <h5 class="card-title"><i class="fas fa-graduation-cap"></i> GPA</h5>
+                            <p class="card-text gpa"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card text-center">
+                        <div class="card-body d-flex align-items-center">
+                            <h5 class="card-title"><i class="fas fa-book"></i> Number of Sub</h5>
+                            <p class="card-text num-subjects"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card text-center">
+                        <div class="card-body d-flex align-items-center">
+                            <h5 class="card-title"><i class="fas fa-clock"></i> Numb of Hours</h5>
+                            <p class="card-text total-hours"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card text-center">
+                        <div class="card-body d-flex align-items-center">
+                            <h5 class="card-title"><i class="fas fa-check-circle"></i> Successful</h5>
+                            <p class="card-text successful-courses"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <button role="button" id="AddSU" class="btn btn-outline-warning" href="#modalCenter" data-bs-toggle="modal" style="position: relative; right: 3%; top: 2%;">ADD
+            Subject</button>
+            <a  href="./Index.html" class="fas fa-sign-out-alt" style="color: #ffffff; font-size: 20px; text-decoration: none;" title="Sign Out"></a>
+    </nav>
+<div class="header d-flex justify-content-center text-center" style="font-size: 40px; font-weight: 500; color: #23455dfe;">
+    Subjects
+</div>
+
+<div class="table-container">
+            
+            <table id="subjectsTable" class="table ">
+                <thead class="table-light" >
+                    <tr>
+                        <th>Code</th>
+                        <th>Subject</th>
+                        <th>Grade of subjects</th>
+                        <th>Hours</th>
+                    </tr>
+                </thead>
+                <tbody >
+                    <!--JavaScript-->
+                </tbody>
+            </table>
+</div>
+<!-- Modal add -->
+<div id="modalCenter" class="modal fade" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <form class="modal-content" id="createForm" action="./php/insert.php" method="POST">
+            <div class="modal-header">
+                <h5 class="modal-title">Add a Course Material</h5>
+            </div>
+            <div class="modal-body" style="display: flex; gap: 10px;">
+                <div class="dropdown" id="dropdownContainer">
+                    <button class="btn btn-secondary dropdown" type="button" id="dropdownMenuButton"
+                        data-bs-toggle="dropdown" aria-expanded="false" required>
+                        Select Subject
+                    </button>
+                    <ul class="dropdown-menu" id="dropdownMenuList">
+                        <!-- Items will be added here by JavaScript -->
+                    </ul>
+                    <input type="hidden" name="course_code" id="createCourseCode" required>
+                    <input type="hidden" name="course_name" id="createCourseName" required>
+                    <input type="hidden" name="course_hours" id="createCourseHours" required>
+                </div>
+                <div class="dropdown" id="dropdownContainer2">
+                    <button class="btn btn-secondary dropdown" type="button" id="dropdownMenuButton2"
+                        data-bs-toggle="dropdown" aria-expanded="false" required>
+                        GPA
+                    </button>
+                    <ul class="dropdown-menu" id="dropdownMenuList2">
+                        <li>
+                            <input type="radio" id="createA" name="GPA" value="A" required>
+                            <label for="createA" class="dropdown-item">A</label>
+                        </li>
+                        <li>
+                            <input type="radio" id="createB" name="GPA" value="B" required>
+                            <label for="createB" class="dropdown-item">B</label>
+                        </li>
+                        <li>
+                            <input type="radio" id="createC" name="GPA" value="C" required>
+                            <label for="createC" class="dropdown-item">C</label>
+                        </li>
+                        <li>
+                            <input type="radio" id="createD" name="GPA" value="D" required>
+                            <label for="createD" class="dropdown-item">D</label>
+                        </li>
+                        <li>
+                            <input type="radio" id="createF" name="GPA" value="F" required>
+                            <label for="createF" class="dropdown-item">F</label>
+                        </li>
+                    </ul>
+                    <input type="hidden" name="GPA" id="createGPA" required>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-primary">ADD</button>
+            </div>
+        </form>
+    </div>
+</div>
+<!-- Modal for Editing Course -->
+<div id="modalCenter_Edit" class="modal fade" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <form class="modal-content" id="editForm" action="./php/update.php" method="POST">
+            <div class="modal-header">
+                <h5 class="modal-title">Edit Course Material</h5>
+                
+            </div>
+            <div class="modal-body" style="display: flex; gap: 10px;">
+                <div class="dropdown" id="dropdownContainer3">
+                    <button class="btn btn-secondary dropdown" type="button" id="dropdownMenuButton3"
+                         required>
+                        Select Subject
+                    </button>
+                    <ul class="dropdown-menu" id="dropdownMenuList3">
+                        <!-- Items will be added here by JavaScript -->
+                         
+                    </ul>
+                    <input type="hidden" name="course_code" id="editCourseCode" required>
+                    <input type="hidden" name="course_name" id="editCourseName" required>
+                    <input type="hidden" name="course_hours" id="editCourseHours" required>
+                    <input type="hidden" name="course_id" id="editCourseId" required>
+                    <input type="hidden" name="GPA" id="editGPA" required>
+                </div>
+                <div class="dropdown" id="dropdownContainer4">
+                    <button class="btn btn-secondary dropdown" type="button" id="dropdownMenuButton4"
+                        data-bs-toggle="dropdown" aria-expanded="false" required>
+                        GPA
+                    </button>
+                    <ul class="dropdown-menu" id="dropdownMenuList4">
+                        <li>
+                            <input type="radio" id="editA" name="GPA" value="A" required>
+                            <label for="editA" class="dropdown-item">A</label>
+                        </li>
+                        <li>
+                            <input type="radio" id="editB" name="GPA" value="B" required>
+                            <label for="editB" class="dropdown-item">B</label>
+                        </li>
+                        <li>
+                            <input type="radio" id="editC" name="GPA" value="C" required>
+                            <label for="editC" class="dropdown-item">C</label>
+                        </li>
+                        <li>
+                            <input type="radio" id="editD" name="GPA" value="D" required>
+                            <label for="editD" class="dropdown-item">D</label>
+                        </li>
+                        <li>
+                            <input type="radio" id="editF" name="GPA" value="F" required>
+                            <label for="editF" class="dropdown-item">F</label>
+                        </li>
+                    </ul>
+                    
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" id="deleteButton" data-bs-dismiss="modal">Remove</button>
+                <button type="submit" class="btn btn-primary">Edit</button>
+            </div>
+        </form>
+    </div>
+</div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="./js/Script(Dashboard).js"></script>
+</body>
+
+</html>
+
